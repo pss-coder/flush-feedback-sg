@@ -101,7 +101,7 @@ export default function FeedbackButtons({ shop } : {
     if (response.status == 200) {
       console.log('Feedback submitted successfully!');
       
-      // navigateToFeedbackSubmit(shop.id)
+      navigateToFeedbackSubmit(String(shop.id))
 
     } else {
       console.error('Failed to submit feedback');

@@ -1,7 +1,26 @@
-import FeedbackButtons from "@/components/FeedbackButtons";
+"use client"
 
+import { useEffect, useState } from "react"
+import { navigateToFeedback } from "../../../../utils/action"
 
-export default function FeedbackSubmit() {
+export default function FeedbackSubmit({
+  params,
+}: {
+  params: { shopId: string}
+}) {
+
+  const [counter, setCounter] = useState(3)
+
+  useEffect(() => {
+
+    if (counter == 0) {
+      navigateToFeedback(params.shopId)
+    }
+    
+    const timer = (counter > 0 && setInterval(() => setCounter(counter - 1), 1000)) as NodeJS.Timeout;
+    return () => clearInterval(timer);
+
+  }, [counter, params])
 
 
   // process id from params, and gender also?
@@ -11,7 +30,8 @@ export default function FeedbackSubmit() {
   return (
     <>
         Feedback Submitted
-        redirecting back in 3,2,1 
+        shopid: {params.shopId}
+        redirecting back in {counter}
     </>
   )
 }
