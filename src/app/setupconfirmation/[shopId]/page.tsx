@@ -1,7 +1,7 @@
 "use client";
 
 import QRCode from "qrcode.react";
-import { getShop } from "../../../../lib/shop/shopManager";
+import { Shop, ShopDB, getShop } from "../../../../lib/shop/shopManager";
 import { createClient } from "../../../../utils/supabase/client";
 
 // interface ConfirmationPageProps {
@@ -21,7 +21,7 @@ export default function Page({
   const { shopId } = params
 
   const supabase = createClient();
-  const data = getShop(supabase, Number(shopId))
+  const data: ShopDB = getShop(supabase, Number(shopId))
   console.log(data)
 
   // retrieve shop details from shop id

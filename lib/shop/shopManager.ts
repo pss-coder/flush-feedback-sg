@@ -6,18 +6,25 @@ export interface Shop {
    address: string | null
   }
 
+  export interface ShopDB {
+    id: number,
+    name: string | null,
+    contact: number | null,
+    address: string | null,
+   }
+
 export function getShops(client: SupabaseClient) {
     return client
       .from('shop')
       .select()
 }
 
-export function getShop(client: SupabaseClient, id: number) {
+export function getShop<ShopDB>(client: SupabaseClient, id: number) {
     return client
       .from('shop')
       .select()
       .eq('id', id)
-      .single();
+      .single() as ShopDB
 }
 
 export function addShop(client: SupabaseClient, shop: Shop) {
