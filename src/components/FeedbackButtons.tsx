@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation';
 // import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react';
 import { navigateToFeedbackSubmit } from '../../utils/action';
+import { ShopDB } from '../../lib/shop/shopManager';
 
 const people = [
   {
@@ -18,7 +19,9 @@ const people = [
   // More people...
 ]
 
-export default function FeedbackButtons({ shop }) {
+export default function FeedbackButtons({ shop } : {
+  shop: ShopDB
+}) {
 
   const [selectedButtons, setSelectedButtons] = useState<string[]>([]);
 
@@ -55,7 +58,7 @@ export default function FeedbackButtons({ shop }) {
       no_more_toilet_paper: null,
       toiled_clogged: null,
       wet_dirty_floor: null,
-    };
+    } as any;
 
     selectedButtons.forEach((label) => {
       const column = labelToColumnMap[label];
