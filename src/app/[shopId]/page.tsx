@@ -13,7 +13,7 @@ export default async function Page({
 
   // get shop by Shop ID
   const supabase = createClient();
-  const {data, error} = await getShop(supabase, Number(shopId))
+  const {data, error} = await getShop(supabase, Number(shopId)) as any
 
   // pass details to display
 
