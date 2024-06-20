@@ -49,7 +49,7 @@ export async function POST(req: Request) {
 
     // send SMS
     sendviaTwilio(`Welcome ${data![0].name}! Your shop toilet monitoring system has been setup! Feedback link:
-    http://www.${headersList.get('host')}/${shopId}
+    http://${headersList.get('host')}/${shopId}
 
     Opt our of SMS alerts by messaging UNSUBSCRIBE
     `, contact)

@@ -13,7 +13,10 @@ export function sendviaTwilio(message: string, sgNumber: string) {
         body: message,
         to: `+65${sgNumber}`
     })
-    .then(message => console.log(message.sid))
+    .then(message => {
+        console.log("SMS sent")
+        console.log(message.sid)
+    })
     .catch((error) => {
         console.log(error);
       });

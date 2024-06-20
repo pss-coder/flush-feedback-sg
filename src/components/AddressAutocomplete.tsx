@@ -60,6 +60,7 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }: {setCoordinates: an
         value={query}
         onChange={handleInputChange}
         placeholder="Enter your address"
+        required
       />
       <button
         type="button"
@@ -73,7 +74,7 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }: {setCoordinates: an
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
           </svg>
         ) : (
-          'Search'
+          'Confirm'
         )}
       </button>
 
