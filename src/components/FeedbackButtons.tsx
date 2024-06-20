@@ -112,7 +112,7 @@ export default function FeedbackButtons({ shop } : {
     }
   };
 
-  function getImageForLabel(label) {
+  function getImageForLabel(label: string) {
     // const images = {
     //   Button1: 'path/to/image1.png',
     //   Button2: 'path/to/image2.png',
