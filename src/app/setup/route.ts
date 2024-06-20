@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     http://www.localhost:3000/${shopId}
 
     Opt our of SMS alerts by messaging UNSUBSCRIBE
-    `)
+    `, contact)
 
     // pass shop id for confirmation
     redirect(`/setupconfirmation/${shopId}`)

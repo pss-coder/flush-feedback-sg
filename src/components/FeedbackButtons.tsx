@@ -56,7 +56,7 @@ export default function FeedbackButtons({ shop } : {
       dirty_mirror: null,
       no_more_soap: null,
       no_more_toilet_paper: null,
-      toiled_clogged: null,
+      toilet_clogged: null,
       wet_dirty_floor: null,
     } as any;
 

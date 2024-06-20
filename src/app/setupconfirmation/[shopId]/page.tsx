@@ -22,11 +22,9 @@ export default function Page({
 
   const supabase = createClient();
   const data: ShopDB = getShop(supabase, Number(shopId))
-  console.log(data)
-
-  // retrieve shop details from shop id
 
   // https://domain.com/shopid <- feedback link
+  console.log(window.location.origin)
 
     const handleCopyToClipboard = (url:string) => {
         navigator.clipboard.writeText(url);
@@ -58,19 +56,19 @@ export default function Page({
           <div className="flex items-center mb-4">
             <input
               type="text"
-              value={`http://www.localhost:3000/${shopId}`}
+              value={window.location.origin+`/${shopId}`}
               readOnly
               className="border border-gray-300 rounded-lg p-2 mr-2 flex-1"
             />
             <button
-              onClick={() => handleCopyToClipboard(`http://www.localhost:3000/${shopId}`)}
+              onClick={() => handleCopyToClipboard(window.location.origin+`/${shopId}`)}
               className="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
             >
               Copy URL
             </button>
           </div>
           <div className="mb-4">
-            <QRCode id="qrcode" value={`http://www.localhost:3000/${shopId}`} size={256} level="H" includeMargin />
+            <QRCode id="qrcode" value={window.location.origin+`/${shopId}`} size={256} level="H" includeMargin />
           </div>
           <button
             onClick={downloadQRCode}
