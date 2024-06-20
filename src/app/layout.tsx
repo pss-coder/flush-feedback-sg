@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "FlushFeedback SG",
-  description: "Effortless Setup, Instant Feedback",
+  title: "SG ReportLah",
+  description: "Clean Toilets, Happier Customers!",
 };
 
 export default function RootLayout({
