@@ -1,10 +1,7 @@
 "use client"
-
-
-// components/AddressAutocomplete.js
 import React, { useState } from 'react';
 
-const AddressAutocomplete = ({ setCoordinates, setAddress }) => {
+const AddressAutocomplete = ({ setCoordinates, setAddress }: {setCoordinates: any, setAddress: any}) => {
 
     const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
@@ -25,7 +22,7 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }) => {
     setLoading(false);
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     // const newQuery = e.target.value;
     // setQuery(newQuery);
     // if (newQuery.length > 2) {
@@ -44,7 +41,7 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }) => {
     }
   };
 
-  const handleSuggestionClick = (suggestion) => {
+  const handleSuggestionClick = (suggestion: any) => {
     const { display_name, lat, lon } = suggestion;
     setQuery(display_name);
     setSuggestions([]);
@@ -83,7 +80,7 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }) => {
       
       {suggestions.length > 0 && (
         <ul className="block w-full z-10  bg-white border border-gray-300 rounded-md mt-1">
-          {suggestions.map((suggestion) => (
+          {suggestions.map((suggestion: any) => (
             <li
               key={suggestion.place_id}
               className="p-2 cursor-pointer hover:bg-gray-100"
