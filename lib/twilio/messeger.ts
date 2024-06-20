@@ -6,7 +6,7 @@ const client = twilio(
     process.env.TWILLIO_AUTH_TOKEN!
 );
 
-export function sendviaTwilio(message) {
+export function sendviaTwilio(message: string) {
     client.messages
     .create({
         from: '+14706643694',
