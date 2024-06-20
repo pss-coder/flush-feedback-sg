@@ -29,6 +29,8 @@ export default function FeedbackButtons({ shop } : {
   const [selectedButtons, setSelectedButtons] = useState<string[]>([]);
   const [gender, setGender] = useState<string>('');
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const buttonLabels = [
     'Bin Full',
     'Dirty Basin',
@@ -90,6 +92,7 @@ export default function FeedbackButtons({ shop } : {
   };
 
   async function handleSubmit() {
+    setIsSubmitting(true)
     // Handle form submission, e.g., send selectedButtons to a server
     console.log('Selected feedback:', selectedButtons);
 
@@ -108,6 +111,7 @@ export default function FeedbackButtons({ shop } : {
       navigateToFeedbackSubmit(String(shop.id))
 
     } else {
+      setIsSubmitting(false)
       console.error('Failed to submit feedback');
     }
   };
@@ -186,8 +190,14 @@ export default function FeedbackButtons({ shop } : {
   <button
     onClick={() => handleSubmit()}
     className="mt-4 px-6 py-3 text-white bg-gray-800 rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
+    disabled={isSubmitting}
   >
-    Submit
+    {isSubmitting ? (
+          <svg className="animate-spin h-5 w-5 mr-3 text-white" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+          </svg>
+        ) : 'Submit'}
   </button>
 </div>
     
