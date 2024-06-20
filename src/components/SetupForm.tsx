@@ -1,20 +1,19 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+"use client";
+
+import dynamic from 'next/dynamic';
+import { useState } from 'react';
+import AddressAutocomplete from './AddressAutoComplete';
+
+const MapPopup = dynamic(() => import('../components/MapPopup'), { ssr: false });
 
 export default function SetupForm() {
+
+  const [coordinates, setCoordinates] = useState({ lat: null, lng: null });
+  const [address, setAddress] = useState('');
+
+  const handleAddressChange = (e: any) => {
+    setAddress(e.target.value);
+  };
 
   return (
     <form action="/setup" method='post'>
@@ -50,13 +49,24 @@ export default function SetupForm() {
                 Street address
               </label>
               <div className="mt-2">
-                <input
+                {/* <input
                   type="text"
                   name="street-address"
                   id="street-address"
                   autoComplete="street-address"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+                  value={address}
+                  onChange={handleAddressChange}
+                /> */}
+                <AddressAutocomplete setCoordinates={setCoordinates} setAddress={setAddress} />
+              {coordinates.lat && coordinates.lng && (
+                <p className="mt-3 text-sm leading-6 text-gray-600">
+                  Latitude: {coordinates.lat}, Longitude: {coordinates.lng}
+                </p>
+              )}
+              <input required type="hidden" name="latitude" value={coordinates.lat || ''} />
+              <input required type="hidden" name="longitude" value={coordinates.lng || ''} />
+               
               </div>
             </div>
 

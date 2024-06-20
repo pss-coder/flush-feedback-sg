@@ -1,4 +1,7 @@
 import { redirect } from 'next/navigation'
+
+import { headers } from 'next/headers';
+
 import { createClient } from '../../../utils/supabase/server'
 import { Shop, addShop } from '../../../lib/shop/shopManager'
 import { sendviaTwilio } from '../../../lib/twilio/messeger'
@@ -16,9 +19,12 @@ export async function POST(req: Request) {
     //const postal = formData.get('postal')//get address property
     const contact = formData.get("contact") as string
 
-    //console.log(name, address, contact)
+    const latitude = formData.get("latitude") as string
+    const longitude = formData.get("longitude") as string
 
-    const shop: Shop = {name, contact: Number(contact), address: address}
+    console.log(name, address, contact, latitude, longitude)
+
+    const shop: Shop = {name, contact: Number(contact), address: address, latitude: Number(latitude), longitude: Number(longitude)}
 
     // Add to DB
     const supabase = createClient();
@@ -27,14 +33,23 @@ export async function POST(req: Request) {
 
     if (error) { 
       // do something 
+      console.log(error)
+      return Response.json({ error: 'Internal Server Error' }, { status: 500 })
     }
 
     console.log("shop inserted success")
     const shopId = data![0].id
 
+    const headersList = headers();
+  
+  //headersList.get('host'); // to get domain
+  //headersList.get('next-url'); // to get url
+    //console.log(headersList.get('host'))
+    //console.log(headersList.get('next-url'))
+
     // send SMS
     sendviaTwilio(`Welcome ${data![0].name}! Your shop toilet monitoring system has been setup! Feedback link:
-    http://www.localhost:3000/${shopId}
+    http://www.${headersList.get('host')}/${shopId}
 
     Opt our of SMS alerts by messaging UNSUBSCRIBE
     `, contact)

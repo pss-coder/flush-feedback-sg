@@ -42,14 +42,15 @@ export async function POST(req: Request) {
 
   console.log("feedback inserted success")
 
-  const shop = await getShop(supabase, shopId) as ShopDB
+  const shop = await getShop(supabase, shopId) as any
+  console.log(shop.data as any)
 
   // send SMS
   // send SMS
   sendviaTwilio(`Hi! Toilet Feedback was just sent.
   
   Opt our of SMS alerts by messaging UNSUBSCRIBE
-  `, String(shop.contact))
+  `, String(shop.data.contact))
 
   // send success response
   return new Response('Success!', { status: 200})

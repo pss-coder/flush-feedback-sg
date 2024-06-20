@@ -3,7 +3,9 @@ import { SupabaseClient } from "@supabase/supabase-js";
 export interface Shop {
    name: string | null,
    contact: number | null,
-   address: string | null
+   address: string | null,
+   longitude: number | null,
+   latitude: number | null
   }
 
   export interface ShopDB {
@@ -11,6 +13,8 @@ export interface Shop {
     name: string | null,
     contact: number | null,
     address: string | null,
+    longitude: number | null,
+   latitude: number | null
    }
 
 export function getShops(client: SupabaseClient) {

@@ -1,17 +1,10 @@
-"use client";
+"use client"
 
 import QRCode from "qrcode.react";
 import { Shop, ShopDB, getShop } from "../../../../lib/shop/shopManager";
 import { createClient } from "../../../../utils/supabase/client";
 
-// interface ConfirmationPageProps {
-//     shopName: string;
-//     location: string;
-//     feedbackURL: string;
-//   }
-
   
-
 export default function Page({
   params,
 }: {
