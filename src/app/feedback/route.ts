@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation'
 import { createClient } from '../../../utils/supabase/server'
 import { Feedback, addFeedback } from '../../../lib/feedback/feedbackManager'
 import { sendviaTwilio } from '../../../lib/twilio/messeger'
+import { ShopDB, getShop } from '../../../lib/shop/shopManager'
 
 
 export const dynamic = 'force-dynamic' // defaults to auto
@@ -41,12 +42,14 @@ export async function POST(req: Request) {
 
   console.log("feedback inserted success")
 
+  const shop = await getShop(supabase, shopId) as ShopDB
+
   // send SMS
   // send SMS
   sendviaTwilio(`Hi! Toilet Feedback was just sent.
   
   Opt our of SMS alerts by messaging UNSUBSCRIBE
-  `)
+  `, String(shop.contact))
 
   // send success response
   return new Response('Success!', { status: 200})
