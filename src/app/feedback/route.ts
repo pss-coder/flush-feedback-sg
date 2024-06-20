@@ -15,12 +15,13 @@ export async function POST(req: Request) {
 
   const feedbacks = res.feedback
   const shopId = res.shopid
+  const gender = res.gender
 
   console.log(feedbacks)
 
   const feedback: Feedback = {
     shop_id: shopId,
-    gender: 'male', // TODO
+    gender: gender,
     
     bin_full: feedbacks.bin_full,
     dirty_basin: feedbacks.dirty_basin,

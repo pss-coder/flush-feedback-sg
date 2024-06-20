@@ -20,12 +20,12 @@ interface Feature {
 
 const features: Array<Feature> = [
   {
-    name: 'Reporting',
-    summary: 'Stay on top of things with always up-to-date reporting features.',
+    name: 'SGReportLah Setup',
+    summary: 'Easily set up your toilet monitoring system.',
     description:
-      'We talked about reporting in the section above but we needed three items here, so mentioning it one more time for posterity.',
-    image: screenshotProfitLoss,
-    icon: function ReportingIcon() {
+      'Sign up with your shop name, address, and contact number. Confirm your address for accurate location finding and receive SMS notifications for feedback.',
+    image: screenshotContacts,
+    icon: function SetupIcon() {
       let id = useId()
       return (
         <>
@@ -54,13 +54,13 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Inventory',
+    name: 'QR Code Display',
     summary:
-      'Never lose track of what’s in stock with accurate inventory tracking.',
+      'Get your unique QR code for feedback collection.',
     description:
-      'We don’t offer this as part of our software but that statement is inarguably true. Accurate inventory tracking would help you for sure.',
-    image: screenshotInventory,
-    icon: function InventoryIcon() {
+      'Receive a unique link and QR code after sign-up. Print and place the QR code on restroom doors for both male and female toilets to start collecting feedback.',
+    image: screenshotContacts,
+    icon: function QRCodeIcon() {
       return (
         <>
           <path
@@ -82,13 +82,13 @@ const features: Array<Feature> = [
     },
   },
   {
-    name: 'Contacts',
+    name: 'Feedback & Statistics',
     summary:
-      'Organize all of your contacts, service providers, and invoices in one place.',
+      'Collect real-time feedback and access live statistics.',
     description:
-      'This also isn’t actually a feature, it’s just some friendly advice. We definitely recommend that you do this, you’ll feel really organized and professional.',
+      'Our customer-centric feedback system gathers insights on what needs refilling or cleaning. Get curated live statistics providing actionable insights to maintain high standards of cleanliness.',
     image: screenshotContacts,
-    icon: function ContactsIcon() {
+    icon: function FeedbackStatisticsIcon() {
       return (
         <>
           <path
@@ -105,6 +105,7 @@ const features: Array<Feature> = [
     },
   },
 ]
+
 
 function Feature({
   feature,
