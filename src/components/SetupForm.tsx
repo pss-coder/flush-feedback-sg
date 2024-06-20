@@ -2,9 +2,9 @@
 
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import AddressAutocomplete from './AddressAutoComplete';
+import AddressAutocomplete from './AddressAutocomplete';
 
-const MapPopup = dynamic(() => import('../components/MapPopup'), { ssr: false });
+// const MapPopup = dynamic(() => import('../components/MapPopup'), { ssr: false });
 
 export default function SetupForm() {
 
