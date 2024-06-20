@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '../../../utils/supabase/server'
-import { addShop } from '../../../lib/shop/shopManager'
+import { Shop, addShop } from '../../../lib/shop/shopManager'
 import { sendviaTwilio } from '../../../lib/twilio/messeger'
 
 
@@ -11,16 +11,18 @@ export async function POST(req: Request) {
     const formData = await req.formData()
 
     // Extract Form data
-    const name = formData.get('name') 
-    const address = formData.get('street-address')
+    const name = formData.get('name') as string
+    const address = formData.get('street-address') as string
     //const postal = formData.get('postal')//get address property
-    const contact = formData.get("contact")
+    const contact = formData.get("contact") as string
 
-    console.log(name, address, contact)
+    //console.log(name, address, contact)
+
+    const shop: Shop = {name, contact: Number(contact), address: address}
 
     // Add to DB
     const supabase = createClient();
-    const {data, error} = await addShop(supabase, {name, address, contact})
+    const {data, error} = await addShop(supabase, shop)
     // console.log(shop)
 
     if (error) { 
