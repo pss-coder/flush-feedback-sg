@@ -34,7 +34,7 @@ export default function FeedbackButtons({ shop } : {
 }) {
 
   const [selectedButtons, setSelectedButtons] = useState<string[]>([]);
-  const [gender, setGender] = useState<string>('male');
+  const [gender, setGender] = useState<string>("male");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
