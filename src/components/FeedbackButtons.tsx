@@ -1,12 +1,19 @@
 "use client"
 
 import { redirect } from 'next/navigation';
-// import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react';
 import { navigateToFeedbackSubmit } from '../../utils/action';
 import { ShopDB } from '../../lib/shop/shopManager';
 
 import mirror from '@/images/mirror.png';
+import trash from '@/images/trash.png';
+import basin from '@/images/basin.png';
+import dirty_toilet from '@/images/dirty-toilet.png';
+import floor from '@/images/floor.png';
+import paper from '@/images/paper.png';
+import soap from '@/images/soap.png';
+import toilet_clogged from '@/images/toilet-clogged.png';
+
 import Image from 'next/image';
 
 const people = [
@@ -27,7 +34,7 @@ export default function FeedbackButtons({ shop } : {
 }) {
 
   const [selectedButtons, setSelectedButtons] = useState<string[]>([]);
-  const [gender, setGender] = useState<string>('');
+  const [gender, setGender] = useState<string>('male');
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -117,13 +124,21 @@ export default function FeedbackButtons({ shop } : {
   };
 
   function getImageForLabel(label: string) {
-    // const images = {
-    //   Button1: 'path/to/image1.png',
-    //   Button2: 'path/to/image2.png',
-    //   Button3: 'path/to/image3.png',
-    //   // Add more mappings as needed
-    // };
-    return mirror;
+    const images: any = {
+      'Bin Full' : trash,
+      'Dirty Basin': basin,
+      'Mirror dirty': mirror,
+
+      'Dirty Toilet bowl': dirty_toilet,
+      'No more soap': soap,
+      'No more toilet paper' : paper,
+
+      'Toilet Clogged': toilet_clogged,
+
+    'Wet/dirty floor': floor
+      // Add more mappings as needed
+    };
+    return images[label];
   }
 
   return (

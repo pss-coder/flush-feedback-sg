@@ -37,3 +37,12 @@ export function addShop(client: SupabaseClient, shop: Shop) {
       .insert(shop)
       .select()
 }
+
+export function doesShopNameExist(client: SupabaseClient, shopName: string) {
+  const {data, error } = client.from('shop').select().eq('name', shopName).single() as any
+  console.log(data)
+  if (data) {return true}
+  if (error) {console.log(error); return true}
+
+  return false
+}
