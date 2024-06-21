@@ -5,6 +5,8 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import { SecondaryFeatures } from "@/components/SecondaryFeatures";
 import SetupForm from "@/components/SetupForm";
+import { createClient } from "../../utils/supabase/client";
+import { doesShopNameExist } from "../../lib/shop/shopManager";
 
 export default function Home() {
 

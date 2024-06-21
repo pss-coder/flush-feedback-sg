@@ -2,6 +2,9 @@
 import { useState } from 'react';
 import AddressAutocomplete from './AddressAutocomplete';
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon, UserIcon } from '@heroicons/react/20/solid';
+import { doesShopNameExist } from '../../lib/shop/shopManager';
+import { createBrowserClient, createServerClient } from '@supabase/ssr';
+import { createClient } from '../../utils/supabase/client';
 
 export default function Contact() {
 
@@ -43,23 +46,22 @@ export default function Contact() {
       return;
     }
 
-    if (doesShopExist(shopName)) {
-      event.preventDefault();
-      setShopNameError("You may already have an exisiting Shop with us. Please contact us.")
-      alert('You may already have an exisiting Shop with us, please look at your mobile message or contact us for help.');
-      setLoading(false)
-      return;
-    }
+    // if (doesShopExist(shopName)) {
+    //   event.preventDefault();
+    //   setShopNameError("You may already have an exisiting Shop with us. Please contact us.")
+    //   alert('You may already have an exisiting Shop with us, please look at your mobile message or contact us for help.');
+    //   setLoading(false)
+    //   return;
+    // }
 
   };
 
-  const doesShopExist = (name: string) => {
-    // Replace this with your actual API call
-    // const response = await fetch(`/api/check-shop-name?name=${name}`);
-    // const data = await response.json();
-    // return data.exists;
-    return false
-  };
+  // const doesShopExist = (name: string) => {
+  //   const supabase = createClient();
+  //   const exists = doesShopNameExist(supabase,name) as boolean
+  //   return exists
+  // };
+
 
   const handleShopNameChange = async (e: any) => {
     const name = e.target.value;
