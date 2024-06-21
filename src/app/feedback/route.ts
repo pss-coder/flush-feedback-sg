@@ -38,7 +38,9 @@ export async function POST(req: Request) {
   const {data, error} = await addFeedback(supabase, feedback )
 
   if (error) { 
-    // do something 
+    // do something
+    console.log(error);
+    return Response.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 
   console.log("feedback inserted success")
