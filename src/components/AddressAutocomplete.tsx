@@ -1,11 +1,13 @@
 "use client"
 import React, { useState } from 'react';
 
-const AddressAutocomplete = ({ setCoordinates, setAddress }: {setCoordinates: any, setAddress: any}) => {
+const AddressAutocomplete = ({ setCoordinates, setAddress, setIsConfirmed }: {setCoordinates: any, setAddress: any, setIsConfirmed: any}) => {
 
     const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const [addressError, setAddressError] = useState('');
 
 
   const fetchSuggestions = async () => {
@@ -30,8 +32,11 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }: {setCoordinates: an
     // } else {
     //   setSuggestions([]);
     // }
+    setAddressError('Please select from dropbox after confirming.'); // remove error
 
     setQuery(e.target.value);
+    setIsConfirmed(false);  // Reset confirmation on input change
+
 
   };
 
@@ -47,6 +52,10 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }: {setCoordinates: an
     setSuggestions([]);
     setCoordinates({ lat: parseFloat(lat), lng: parseFloat(lon) });
     setAddress(display_name);
+
+    setAddressError(''); // remove error
+    setIsConfirmed(true);  // Set confirmation when suggestion is clicked
+
   };
 
   return (
@@ -62,6 +71,7 @@ const AddressAutocomplete = ({ setCoordinates, setAddress }: {setCoordinates: an
         placeholder="Enter your address"
         required
       />
+      {addressError && <p className="mt-1 text-sm text-red-600">{addressError}</p>}
       <button
         type="button"
         className="mt-2 bg-indigo-500 text-white px-3 py-1 rounded-md"

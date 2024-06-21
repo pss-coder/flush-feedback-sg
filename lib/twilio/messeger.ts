@@ -9,9 +9,11 @@ const client = twilio(
 export function sendviaTwilio(message: string, sgNumber: string) {
     client.messages
     .create({
-        from: '+14706643694', // Twilio number
+        from: '+12036978715', // Twilio number
         body: message,
-        to: `+65${sgNumber}`
+        to: `+6580336612`
+        // to: `+65${sgNumber}`
+        // 80336612
     })
     .then(message => {
         console.log("SMS sent")

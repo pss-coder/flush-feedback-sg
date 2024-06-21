@@ -5,9 +5,9 @@ import Image, { type ImageProps } from 'next/image'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
-import screenshotContacts from '@/images/screenshots/contacts.png'
-import screenshotInventory from '@/images/screenshots/inventory.png'
-import screenshotProfitLoss from '@/images/screenshots/profit-loss.png'
+import setupScreenShot from '@/images/SetupFormScreen.png'
+import QRURLScreenShot from '@/images/QRPageScreen.png'
+import statisticsScreenShot from '@/images/statisticsScreenShot.png'
 import { Container } from './Container'
 
 interface Feature {
@@ -24,7 +24,7 @@ const features: Array<Feature> = [
     summary: 'Easily set up your toilet monitoring system.',
     description:
       'Sign up with your shop name, address, and contact number. Confirm your address for accurate location finding and receive SMS notifications for feedback.',
-    image: screenshotContacts,
+    image: setupScreenShot,
     icon: function SetupIcon() {
       let id = useId()
       return (
@@ -59,7 +59,7 @@ const features: Array<Feature> = [
       'Get your unique QR code for feedback collection.',
     description:
       'Receive a unique link and QR code after sign-up. Print and place the QR code on restroom doors for both male and female toilets to start collecting feedback.',
-    image: screenshotContacts,
+    image: QRURLScreenShot,
     icon: function QRCodeIcon() {
       return (
         <>
@@ -87,7 +87,7 @@ const features: Array<Feature> = [
       'Collect real-time feedback and access live statistics.',
     description:
       'Our customer-centric feedback system gathers insights on what needs refilling or cleaning. Get curated live statistics providing actionable insights to maintain high standards of cleanliness.',
-    image: screenshotContacts,
+    image: statisticsScreenShot,
     icon: function FeedbackStatisticsIcon() {
       return (
         <>
