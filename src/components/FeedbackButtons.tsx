@@ -202,7 +202,8 @@ export default function FeedbackButtons({ shop } : {
       </button>
     ))}
   </div>
-  <button
+  {selectedButtons.length > 0 && (
+    <button
     onClick={() => handleSubmit()}
     className="mt-4 px-6 py-3 text-white bg-gray-800 rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
     disabled={isSubmitting}
@@ -214,6 +215,8 @@ export default function FeedbackButtons({ shop } : {
           </svg>
         ) : 'Submit'}
   </button>
+  )}
+  
 </div>
     
   )
