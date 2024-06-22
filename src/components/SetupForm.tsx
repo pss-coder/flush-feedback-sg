@@ -11,6 +11,9 @@ export default function SetupForm() {
   const [coordinates, setCoordinates] = useState({ lat: null, lng: null });
   const [address, setAddress] = useState('');
 
+  const [isConfirmed, setIsConfirmed] = useState(false);
+
+
   const handleAddressChange = (e: any) => {
     setAddress(e.target.value);
   };
@@ -59,7 +62,7 @@ export default function SetupForm() {
                   value={address}
                   onChange={handleAddressChange}
                 /> */}
-                <AddressAutocomplete setCoordinates={setCoordinates} setAddress={setAddress} />
+                <AddressAutocomplete setIsConfirmed={setIsConfirmed} setCoordinates={setCoordinates} setAddress={setAddress} />
               {coordinates.lat && coordinates.lng && (
                 <p className="mt-3 text-sm leading-6 text-gray-600">
                   Latitude: {coordinates.lat}, Longitude: {coordinates.lng}

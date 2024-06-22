@@ -38,9 +38,9 @@ export async function POST(req: Request) {
   const {data, error} = await addFeedback(supabase, feedback )
 
   if (error) { 
-    // do something 
-    console.log(error)
-    return Response.json({ error: 'Internal Server Error' }, { status: 500 })
+    // do something
+    console.log(error);
+    return Response.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 
   console.log("feedback inserted success")
@@ -50,8 +50,7 @@ export async function POST(req: Request) {
 
   // send SMS
   // send SMS
-  sendviaTwilio(`Hi! Toilet Feedback was just sent.
-  
+  sendviaTwilio(`Hi ${shop.data.name}! Toilet Feedback was just sent from ${gender} toilet.
   Opt our of SMS alerts by messaging UNSUBSCRIBE
   `, String(shop.data.contact))
 

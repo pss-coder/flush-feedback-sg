@@ -11,7 +11,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 //   // { name: 'Company', href: '#' },
 // ]
 
-export default function Example() {
+export default function Hero({url}: {url: string}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -25,7 +25,7 @@ export default function Example() {
               <p className='text-xl font-bold'>SG ReportLah</p>
             </a>
           </div>
-          {/* <div className="flex lg:hidden">
+          <div className="flex lg:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -34,7 +34,7 @@ export default function Example() {
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
-          </div> */}
+          </div>
           {/* <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
@@ -42,11 +42,23 @@ export default function Example() {
               </a>
             ))}
           </div> */}
-          {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a href={`http://`+url+'/setupconfirmation/52'} 
+            target=' _blank'
+                    className="mr-4 rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+
+            >
+            Demo - Link to Shop Setup Confirmation <span aria-hidden="true"></span>
             </a>
-          </div> */}
+
+            <a href={`http://`+url+'/52'} 
+            target=' _blank'
+            className="mr-4 rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Demo - Link to Feedback Page <span aria-hidden="true"></span>
+            </a>
+            
+          </div>
         </nav>
         <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
@@ -83,14 +95,22 @@ export default function Example() {
                     </a>
                   ))} */}
                 </div>
-                {/* <div className="py-6">
+                <div className="py-6">
                   <a
-                    href="#"
+                    href={`http://`+url+'/setupconfirmation/52'} 
+                    target=' _blank'
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    Demo - Link to Shop Setup Confirmation
                   </a>
-                </div> */}
+                  <a
+                    href={`http://`+url+'/52'} 
+                    target=' _blank'
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Demo - Link to Feedback Page
+                  </a>
+                </div>
               </div>
             </div>
           </DialogPanel>
