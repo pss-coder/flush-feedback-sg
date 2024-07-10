@@ -29,12 +29,13 @@ const people = [
   // More people...
 ]
 
-export default function FeedbackButtons({ shop } : {
-  shop: ShopDB
+export default function FeedbackButtons({ shop, genderStr} : {
+  shop: ShopDB,
+  genderStr: string
 }) {
 
   const [selectedButtons, setSelectedButtons] = useState<string[]>([]);
-  const [gender, setGender] = useState<string>("male");
+  const [gender, setGender] = useState<string>(genderStr);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -98,6 +99,14 @@ export default function FeedbackButtons({ shop } : {
     );
   };
 
+  function capitalise(word:string) {
+    const firstLetter = word.charAt(0);
+    const firstLetterCap = firstLetter.toUpperCase()
+    const remainingLetters = word.slice(1)
+    const capitalizedWord = firstLetterCap + remainingLetters
+    return capitalizedWord
+  }
+
   async function handleSubmit() {
     setIsSubmitting(true)
     // Handle form submission, e.g., send selectedButtons to a server
@@ -115,7 +124,7 @@ export default function FeedbackButtons({ shop } : {
     if (response.status == 200) {
       console.log('Feedback submitted successfully!');
       
-      navigateToFeedbackSubmit(String(shop.id))
+      navigateToFeedbackSubmit(String(shop.id), gender)
 
     } else {
       setIsSubmitting(false)
@@ -146,9 +155,10 @@ export default function FeedbackButtons({ shop } : {
   <div className="mb-4 text-center">
     <h1 className="text-2xl font-bold">{shop.name}</h1>
     <p className="text-lg text-gray-600">{shop.address}</p>
+    <p className="text-lg text-gray-600">{capitalise(gender)} Toilet</p>
 
    {/* Radio button slider for gender selection */}
-   <div className="mt-4 flex items-center justify-center space-x-4">
+   <div className="mt-4 flex items-center justify-center space-x-4 hidden">
           <input
             type="radio"
             id="male"

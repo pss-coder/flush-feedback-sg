@@ -1,20 +1,22 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { navigateToFeedback } from "../../../../utils/action"
+import { navigateToFeedback } from "../../../../../utils/action"
 
 export default function FeedbackSubmit({
   params,
 }: {
-  params: { shopId: string}
-}) {
+  params: { shopId: string, gender: string}
+})  {
+
+  const { shopId, gender } = params
 
   const [counter, setCounter] = useState(3)
 
   useEffect(() => {
 
     if (counter == 0) {
-      navigateToFeedback(params.shopId)
+      navigateToFeedback(shopId, gender)
     }
     
     const timer = (counter > 0 && setInterval(() => setCounter(counter - 1), 1000)) as NodeJS.Timeout;
