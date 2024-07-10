@@ -10,7 +10,7 @@ export default function QRURLClipboard({ shop, url}: {shop: ShopDB,url: string})
   const [maleFeedbackUrl, setMaleShopUrl] = useState(`http://` + url +  `/${shop.id}/male`);
   const [femaleFeedbackUrl, setFemaleShopUrl] = useState(`http://` + url + `/${shop.id}/female`);
 
-  const handleCopyToClipboard = async (url) => {
+  const handleCopyToClipboard = async (url: string) => {
     try {
       await navigator.clipboard.writeText(url);
       alert('URL copied to clipboard!');
@@ -19,7 +19,7 @@ export default function QRURLClipboard({ shop, url}: {shop: ShopDB,url: string})
     }
   };
 
-  const downloadQRCode = (id, filename) => {
+  const downloadQRCode = (id: string, filename: string) => {
     const canvas = document.getElementById(id);
     if (canvas) {
       const pngUrl = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
