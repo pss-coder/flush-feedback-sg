@@ -15,7 +15,7 @@ export default function QRURLClipboard({ shop, url}: {shop: ShopDB,url: string})
       await navigator.clipboard.writeText(url);
       alert('URL copied to clipboard!');
     } catch (err) {
-      alert('Failed to copy URL: ', err);
+      alert('Failed to copy URL: ' +  err);
     }
   };
 
