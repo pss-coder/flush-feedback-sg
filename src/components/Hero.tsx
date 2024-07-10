@@ -51,12 +51,12 @@ export default function Hero({url}: {url: string}) {
             Demo - Link to Shop Setup Confirmation <span aria-hidden="true"></span>
             </a>
 
-            <a href={`http://`+url+'/52'} 
+            {/* <a href={`http://`+url+'/52'} 
             target=' _blank'
             className="mr-4 rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Demo - Link to Feedback Page <span aria-hidden="true"></span>
-            </a>
+            </a> */}
             
           </div>
         </nav>
@@ -103,13 +103,13 @@ export default function Hero({url}: {url: string}) {
                   >
                     Demo - Link to Shop Setup Confirmation
                   </a>
-                  <a
+                  {/* <a
                     href={`http://`+url+'/52'} 
                     target=' _blank'
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Demo - Link to Feedback Page
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

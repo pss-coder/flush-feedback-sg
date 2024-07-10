@@ -4,7 +4,7 @@ import { headers } from 'next/headers';
 
 import { createClient } from '../../../utils/supabase/server'
 import { Shop, addShop } from '../../../lib/shop/shopManager'
-import { sendviaTwilio } from '../../../lib/twilio/messeger'
+//import { sendviaTwilio } from '../../../lib/twilio/messeger'
 
 
 export const dynamic = 'force-dynamic' // defaults to auto
@@ -48,11 +48,11 @@ export async function POST(req: Request) {
     //console.log(headersList.get('next-url'))
 
     // send SMS
-    sendviaTwilio(`Welcome ${data![0].name}! Your shop toilet monitoring system has been setup! Feedback link:
-    http://${headersList.get('host')}/${shopId}
+    // sendviaTwilio(`Welcome ${data![0].name}! Your shop toilet monitoring system has been setup! Feedback link:
+    // http://${headersList.get('host')}/${shopId}
 
-    Opt our of SMS alerts by messaging UNSUBSCRIBE
-    `, contact)
+    // Opt our of SMS alerts by messaging UNSUBSCRIBE
+    // `, contact)
 
     // pass shop id for confirmation
     redirect(`/setupconfirmation/${shopId}`)

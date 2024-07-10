@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '../../../utils/supabase/server'
 import { Feedback, addFeedback } from '../../../lib/feedback/feedbackManager'
-import { sendviaTwilio } from '../../../lib/twilio/messeger'
+// import { sendviaTwilio } from '../../../lib/twilio/messeger'
 import { ShopDB, getShop } from '../../../lib/shop/shopManager'
 
 
@@ -50,9 +50,9 @@ export async function POST(req: Request) {
 
   // send SMS
   // send SMS
-  sendviaTwilio(`Hi ${shop.data.name}! Toilet Feedback was just sent from ${gender} toilet.
-  Opt our of SMS alerts by messaging UNSUBSCRIBE
-  `, String(shop.data.contact))
+  // sendviaTwilio(`Hi ${shop.data.name}! Toilet Feedback was just sent from ${gender} toilet.
+  // Opt our of SMS alerts by messaging UNSUBSCRIBE
+  // `, String(shop.data.contact))
 
   // send success response
   return new Response('Success!', { status: 200})
