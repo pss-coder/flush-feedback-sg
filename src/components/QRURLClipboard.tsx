@@ -20,7 +20,7 @@ export default function QRURLClipboard({ shop, url}: {shop: ShopDB,url: string})
   };
 
   const downloadQRCode = (id: string, filename: string) => {
-    const canvas = document.getElementById(id);
+    const canvas = document.getElementById(id) as HTMLCanvasElement;
     if (canvas) {
       const pngUrl = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
       const downloadLink = document.createElement('a');
