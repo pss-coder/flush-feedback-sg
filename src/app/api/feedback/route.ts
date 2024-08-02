@@ -1,5 +1,5 @@
 import { createClient } from '../../../../utils/supabase/server'
-import { addFeedback } from '../../../../lib/feedback/feedbackManager'
+import { addFeedback, Feedback } from '../../../../lib/feedback/feedbackManager'
 import { getShop } from '../../../../lib/shop/shopManager'
 
 export const dynamic = 'force-dynamic' // defaults to auto
