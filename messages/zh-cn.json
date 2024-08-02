@@ -1,0 +1,50 @@
+{
+  "Hero": {
+    "title": "干净的厕所 🚽 \n 更快乐的顾客 😁！",
+    "description": "欢迎来到 SGReportLah，一个为保持新加坡清洁厕所而设计的解决方案。我们的平台让店主能够轻松设置和监控厕所的清洁度，并通过实时反馈和仪表板获取实时统计数据。",
+    "get-started": "开始使用",
+    "learn-more": "了解更多"
+  },
+  "Features": {
+    "title": "提升客户满意度",
+    "description": "因为您确保了无暇的厕所设施，您保持了高标准的清洁度，从而提高了顾客在您店内的体验。",
+    "easy-setup": {
+      "name": "SGReportLah 设置",
+      "title": "轻松设置您的厕所监控系统。",
+      "description": "注册时填写您的店铺名称、地址和联系电话。确认您的地址以便准确定位，并接收反馈的短信通知。"
+    },
+    "qr-code": {
+      "name": "二维码展示",
+      "title": "获取您独特的反馈收集二维码。",
+      "description": "注册后将收到一个独特的链接和二维码。打印并将二维码贴在男女厕所的门上开始收集反馈。"
+    },
+    "insights": {
+      "name": "反馈与统计",
+      "title": "收集实时反馈并访问实时统计数据。",
+      "description": "我们以客户为中心的反馈系统收集关于需要补充或清洁的见解。获取定制的实时统计数据，提供可操作的见解以保持高标准的清洁度。"
+    }
+  },
+  "SetupForm": {
+  "title": "设置您的厕所反馈",
+  "description": "要设置 SGReportLah，只需提供您的店铺名称、地址（请确认以便准确定位）和联系电话（用于在收到反馈时发送短信通知）。这确保您能及时收到警报，并能保持高标准的厕所清洁度。",
+  "form": {
+    "name": "店铺名称",
+    "address": "店铺地址",
+    "address-autocomplete": {
+      "label": "输入您的地址",
+      "button": "确认"
+    },
+    "contact": "联系电话",
+    "contact-demo": "演示目的：电话号码将预设为 80336612",
+    "button": "完成设置"
+    }
+  },
+  "FeedbackQR": {
+  "url": "厕所反馈链接",
+  "copy-male-button": "复制男厕所反馈链接",
+  "copy-female-button": "复制女厕所反馈链接",
+  "download-male-button": "下载男厕所反馈二维码",
+  "download-female-button": "下载女厕所反馈二维码"
+}
+
+}
