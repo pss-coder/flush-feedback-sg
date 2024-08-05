@@ -191,11 +191,11 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
 
 {/* Toilet Paper */}
 
-  <g className={!toggleLanguage ? `` : 'hidden' } id="Toilet_Paper_x5F_Text__x28_Eng_x29_">
+  <g className={!toggleLanguage ? `` : 'hidden' } onClick={() => handleSubmit('paper')} id="Toilet_Paper_x5F_Text__x28_Eng_x29_">
     <path className="cls-15" d="M679.22,127.51h-130.41l-2.69-9.64c-4.23-6.99-11.95-23.68-36.82-22.54v-36.9c0-3.99,3.23-7.22,7.22-7.22h162.7c3.99,0,7.22,3.23,7.22,7.22v61.86c0,3.99-3.23,7.22-7.22,7.22Z"/>
     <text className="cls-19" transform="translate(520.24 82.11)"><tspan x="0" y="0">No more </tspan><tspan className="cls-24" x="100.42" y="0">t</tspan><tspan x="108.33" y="0">oilet </tspan><tspan x="40.83" y="29.35">paper?</tspan></text>
   </g>
-  <g className={toggleLanguage ? '' : 'hidden'} id="Toilet_Paper_x5F_Text__x28_Chi_x29_">
+  <g className={toggleLanguage ? '' : 'hidden'} onClick={() => handleSubmit('paper')} id="Toilet_Paper_x5F_Text__x28_Chi_x29_">
     <path className="cls-15" d="M679.22,127.51h-130.41l-2.69-9.64c-4.23-6.99-11.95-23.68-36.82-22.54v-36.9c0-3.99,3.23-7.22,7.22-7.22h162.7c3.99,0,7.22,3.23,7.22,7.22v61.86c0,3.99-3.23,7.22-7.22,7.22Z"/>
     <text className="cls-20" transform="translate(574.08 82.71)"><tspan x="0" y="0">没有</tspan><tspan x="-18.03" y="29.35">卫生纸?</tspan></text>
   </g>
@@ -230,11 +230,11 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
 
 
 
-  <g className={!toggleLanguage ? `` : 'hidden' } id="Toilet_x5F_Text__x28_Eng_x29_">
+  <g onClick={() => handleSubmit('toilet')} className={!toggleLanguage ? `` : 'hidden' } id="Toilet_x5F_Text__x28_Eng_x29_">
     <path className="cls-22" d="M655.47,288.53h-127.44c-3.99,0-7.22-3.23-7.22-7.22v-58.76c0-3.99,3.23-7.22,7.22-7.22h137.36c3.99,0,7.22,3.23,7.22,7.22v32.26l-16.25,5.18c-.91.29-.86,9.13-.83,16.84.02,5.19-.06,9.51-.06,11.71Z"/>
     <text className="cls-19" transform="translate(536 246.42)"><tspan x="0" y="0">Is the flush</tspan><tspan x="11.08" y="29.35">working?</tspan></text>
   </g>
-  <g className={toggleLanguage ? '' : 'hidden'} id="Toilet_x5F_Text__x28_Chi_x29_">
+  <g onClick={() => handleSubmit('toilet')} className={toggleLanguage ? '' : 'hidden'} id="Toilet_x5F_Text__x28_Chi_x29_">
     <path className="cls-22" d="M655.47,288.53h-127.44c-3.99,0-7.22-3.23-7.22-7.22v-58.76c0-3.99,3.23-7.22,7.22-7.22h137.36c3.99,0,7.22,3.23,7.22,7.22v32.26l-16.25,5.18c-.91.29-.86,9.13-.83,16.84.02,5.19-.06,9.51-.06,11.71Z"/>
     <text className="cls-20" transform="translate(560.44 247.03)"><tspan x="0" y="0">不可以</tspan><tspan x="0" y="29.35">冲水？</tspan></text>
   </g>
@@ -268,11 +268,11 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
  
 
 
-  <g className={!toggleLanguage ? `` : 'hidden' } id="Dustbin_x5F_Text__x28_Eng_x29_">
+  <g onClick={() => handleSubmit('dustbin')} className={!toggleLanguage ? `` : 'hidden' } id="Dustbin_x5F_Text__x28_Eng_x29_">
     <path className="cls-15" d="M114.08,340.15H25.68c-3.99,0-7.22-3.23-7.22-7.22v-55.17c0-3.99,3.23-7.22,7.22-7.22h106.98c3.99,0,7.22,3.23,7.22,7.22v27.59l-11.5,4.21c-4.93,3.02-21.06,8.33-14.3,21.37,2.78,5.36,0,5.85,0,9.23Z"/>
     <text className="cls-19" transform="translate(28.66 300.18)"><tspan x="0" y="0">Is the bin</tspan><tspan x="26.71" y="29.35">full?</tspan></text>
   </g>
-  <g className={toggleLanguage ? '' : 'hidden'} id="Dustbin_x5F_Text__x28_Chi_x29_">
+  <g onClick={() => handleSubmit('dustbin')} className={toggleLanguage ? '' : 'hidden'} id="Dustbin_x5F_Text__x28_Chi_x29_">
     <path className="cls-15" d="M114.08,340.15H25.68c-3.99,0-7.22-3.23-7.22-7.22v-55.17c0-3.99,3.23-7.22,7.22-7.22h106.98c3.99,0,7.22,3.23,7.22,7.22v27.59l-11.5,4.21c-4.93,3.02-21.06,8.33-14.3,21.37,2.78,5.36,0,5.85,0,9.23Z"/>
     <text className="cls-20" transform="translate(42.48 300.78)"><tspan x="0" y="0">垃圾箱</tspan><tspan x="0" y="29.35">满了？</tspan></text>
   </g>
@@ -314,11 +314,11 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
 </g>
 
  
-  <g className={!toggleLanguage ? `` : 'hidden' } id="Wet_Floor_x5F_Text__x28_Eng_x29_">
+  <g onClick={() => handleSubmit('wet-floor')} className={!toggleLanguage ? `` : 'hidden' } id="Wet_Floor_x5F_Text__x28_Eng_x29_">
     <path className="cls-15" d="M375.43,422.32l-10.93.22c-10.77.05-22.64-.41-36.1-1.48-13.6-1.09-26.79-2.4-33.88-1.89-1.4.1-1.25-2.56-1.25-4.07v-54.41c0-3.99,3.23-7.22,7.22-7.22h127.2c3.99,0,7.22,3.23,7.22,7.22v36.81l-16.17.22c-11.77,1.61-18.69,14.27-25.17,18.61-6.33,4.24-16.45,6-18.14,6Z"/>
     <text className="cls-19" transform="translate(305.66 382.39)"><tspan x="0" y="0">Is the floor</tspan><tspan x="33.63" y="29.35">wet?</tspan></text>
   </g>
-  <g className={toggleLanguage ? '' : 'hidden'} id="Wet_Floor_x5F_Text__x28_Chi_x29_">
+  <g onClick={() => handleSubmit('wet-floor')} className={toggleLanguage ? '' : 'hidden'} id="Wet_Floor_x5F_Text__x28_Chi_x29_">
     <path className="cls-15" d="M375.43,422.32l-10.93.22c-10.77.05-22.64-.41-36.1-1.48-13.6-1.09-26.79-2.4-33.88-1.89-1.4.1-1.25-2.56-1.25-4.07v-54.41c0-3.99,3.23-7.22,7.22-7.22h127.2c3.99,0,7.22,3.23,7.22,7.22v36.81l-16.17.22c-11.77,1.61-18.69,14.27-25.17,18.61-6.33,4.24-16.45,6-18.14,6Z"/>
     <text className="cls-20" transform="translate(322.62 397.67)"><tspan x="0" y="0">地板湿?</tspan></text>
   </g>
@@ -341,11 +341,11 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
 
   
 
-  <g className={!toggleLanguage ? `` : 'hidden' } id="Sink_x5F_Text__x28_Eng_x29_">
+  <g onClick={() => handleSubmit('sink')} className={!toggleLanguage ? `` : 'hidden' } id="Sink_x5F_Text__x28_Eng_x29_">
     <path className="cls-15" d="M459.6,239.57l-103.7.94s3.24-7.63,4.31-12.5c.51-2.33.93-11.95-10.62-21.73l-24.6,6.95v-41.05c0-3.99,3.23-7.22,7.22-7.22h127.39c3.99,0,7.22,3.23,7.22,7.22v60.17c0,3.99-3.23,7.22-7.22,7.22Z"/>
     <text className="cls-19" transform="translate(340.48 195.52)"><tspan x="0" y="0">Is the sink</tspan><tspan x="25.19" y="29.35">di</tspan><tspan className="cls-16" x="45.46" y="29.35">r</tspan><tspan x="54.98" y="29.35">ty?</tspan></text>
   </g>
-  <g className={toggleLanguage ? '' : 'hidden'} id="Sink_x5F_Text__x28_Chi_x29_">
+  <g onClick={() => handleSubmit('sink')} className={toggleLanguage ? '' : 'hidden'} id="Sink_x5F_Text__x28_Chi_x29_">
     <path className="cls-15" d="M459.6,239.57l-103.7.94s3.24-7.63,4.31-12.5c.51-2.33.93-11.95-10.62-21.73l-24.6,6.95v-41.05c0-3.99,3.23-7.22,7.22-7.22h127.39c3.99,0,7.22,3.23,7.22,7.22v60.17c0,3.99-3.23,7.22-7.22,7.22Z"/>
     <text className="cls-20" transform="translate(354.44 210.8)"><tspan x="0" y="0">水槽脏?</tspan></text>
   </g>
@@ -377,16 +377,11 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
     </g>
 
   
-
-
- 
-
-
-  <g  className={!toggleLanguage ? `` : 'hidden' } id="Soap_x5F_Text__x28_Eng_x29_">
+  <g onClick={() => handleSubmit('soap')}  className={!toggleLanguage ? `` : 'hidden' } id="Soap_x5F_Text__x28_Eng_x29_">
     <path className="cls-15" d="M117.27,165.5l-97.16-1.28c-3.99,0-7.22-3.23-7.22-7.22v-51.18c0-3.99,3.23-7.22,7.22-7.22h106.61c3.99,0,7.22,3.23,7.22,7.22v32.72l-16.91,4.78c0,3.99,0,15.41.24,22.2Z"/>
     <text className="cls-19" transform="translate(27.66 125.9)"><tspan x="0" y="0">No more</tspan><tspan x="14.44" y="29.35">soap?</tspan></text>
   </g>
-  <g className={toggleLanguage ? '' : 'hidden'} id="Soap_x5F_Text__x28_Chi_x29_">
+  <g onClick={() => handleSubmit('soap')} className={toggleLanguage ? '' : 'hidden'} id="Soap_x5F_Text__x28_Chi_x29_">
     <text className="cls-20" transform="translate(50.37 126.5)"><tspan x="0" y="0">没有</tspan><tspan x="-24.46" y="29.35">肥皂了？</tspan></text>
   </g>
  
@@ -433,8 +428,11 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
   <g id="Tablet">
     <path d="M715.18,0v464.3H0V0h715.18M715.18-5H0C-2.76-5-5-2.76-5,0v464.3c0,2.76,2.24,5,5,5h715.18c2.76,0,5-2.24,5-5V0c0-2.76-2.24-5-5-5h0Z"/>
   </g>
+
+
+  {/* Hands */}
   
-  <g id="Cleaner_x5F_Colour">
+  {/* <g id="Cleaner_x5F_Colour">
     <path className="cls-17" d="M-2.09,150.09l18.64,14.23,13.41,12.63,9.18,11.51,6.19,13.19,4.3,13.54.44,6.14-2.82,11.63-8.79,14.6-11.04,12.15-13.1,9.35-21.31,12.49-36.15,11.9-10.36,2.48h-14.89l-20.63-4.21-5.88-2.72s-1.58-3.25-1.55-3.45.35-3.92.35-3.92l4.27-2.01-3.85-3.13.28-3.65,3.26-3.38-.8-5.35,3.8-4.05.63-4.74,3.52-2.83,9.6,5.84,12.5,6.27,8.35.62,4.25-2.15-1.32-3.19,3.31-6.42,6.86,1.2,15.36-.64,12.19-4.41,9.29-7.83L.02,233.93l2.95-8.37-1.25-8.82-5.13-9.15-5.97-7.53-7.35-4.41,3-8.11,6.02-8.2v-4.69l2.78-5.68,1.53-6.64-2.91-1.58,1.51-4.61,2.72-6.06Z"/>
     <polygon className="cls-28" points="4.35 71.59 6.09 66.87 11.43 65.49 25.49 71.59 27.32 77.71 24.73 86.63 -5.86 159.37 -15.99 165.86 -23.63 166.59 -30.46 165.49 -32.62 163.23 -32.62 160.39 4.35 71.59"/>
   </g>
@@ -457,7 +455,7 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
     <path className="cls-25" d="M475.45,37.14c-4.12-1.38-8.59-4.82-9.84-9.13-.08-1.13.57-2.18,1.33-2.96,1.58-1.07,2.2,1.38.96,2.23-.91,1.58,3.59,5.3,4.99,5.99,2.48,1.79,3.33,1.97,5.69-.14,4.79-5.66,9.85-11.16,14.31-17.1.71-1.96,3.04-.83,1.98.91-2.04,2.99-4.49,5.85-6.84,8.55-3.79,3.26-7.35,11.28-12.54,11.64-.01,0-.02,0-.03,0Z"/>
     <path className="cls-25" d="M485.42,26.27c.86-1.38,2.41.23,1.68,1.33-.55.96-1.18,1.92-1.31,3.05,2.07,3.39,7.79,4.03,11.12,2.1,6.04-5.1,9.4-12.68,13.28-19.42,2.39-4.31,3.59-9.16,5.47-13.69,2.31-4.2,4.18-8.67,6.85-12.66,2.95-3.5,5.98-6.96,9.17-10.26.2.17.4.33.6.49,0,0,0,0,0,0,.01.01.03.02.04.03,0,0,.02.01.03.02h0c.35.26.71.53,1.06.8-.02-.02-.05-.04-.07-.05.03.02.06.04.09.07-3.52,3.58-6.82,7.37-9.97,11.28-2.28,4.17-4.47,8.2-6.45,12.48-1.37,3.78-2.63,7.64-4.31,11.29-2.15,4.13-4.43,8.18-6.94,12.11-2.86,4.53-6.36,10.58-12.1,10.97-.52.04-1.05.02-1.61-.04-.54-.04-1.08-.11-1.6-.21-5.01-.92-8.99-4.36-5.04-9.7Z"/>
     <path className="cls-25" d="M529.32-20.35c-.91-.93.4-1.89,1.11-2.46.58-1.38,1.84-2.26,2.99-3.15,2.17-2.21,4.71-4.01,7.14-5.91,1.31-1.33,2.6-2.67,4.23-3.62,10.27-8.53,23.36-12.69,36.44-14.43,5.13-.14,10.28.23,15.43.04,6.71-.06,13.34,1.28,20.01,1.9,6.94,1.12,13.61,3.43,20.37,5.31,4.54,1.36,8.51,4.06,13.05,5.47,5.28,2.17,10.92,3.31,16.07,5.84,3.32,1.27,6.24,3.24,9.28,5.03,5.65,2.07,11,4.73,16.49,7.18,4.53,1.95,8.9,4.23,13.15,6.74,3.79,2.04,7.84,3.53,11.58,5.64,9.47,5.88,19.96,9.62,30.2,13.89,8.49,3.45,17.22,6.27,26.21,8.09,4.34.89,8.8.47,13.16,1.05,2.12-2.93,3.39,2.38-.56,2.01-3.95-.45-7.97-.1-11.91-.8-3.78-.51-7.44-1.71-11.15-2.56-12.54-3.54-24.42-9.05-36.44-14.02-4.6-1.9-8.66-4.83-13.11-7.05-6.97-2.9-13.31-6.99-20.16-10.12-6-2.62-11.79-5.67-17.98-7.84-3.73-1.96-7.19-4.39-11.17-5.87-4.67-2.16-9.73-3.21-14.48-5.17-4.47-1.39-8.44-3.95-12.87-5.43-6.51-1.81-12.93-3.98-19.59-5.2-7.07-.76-14.15-2.03-21.24-2.02-4.32.19-8.64.07-12.97-.11-2.92.1-5.76.92-8.65,1.34-10.06,1.93-19.9,6.11-27.85,12.62-1.77.99-3.04,2.58-4.55,3.89-2.47,1.81-4.85,3.74-7.06,5.85-1.87.81-2.99,4.93-5.17,3.84Z"/>
-  </g>
+  </g> */}
 
 </svg>
 )
