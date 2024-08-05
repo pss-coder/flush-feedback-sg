@@ -474,7 +474,7 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setToggleLanguage(prevToggle => !prevToggle);
-    }, 3000);
+    }, 1500);
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
