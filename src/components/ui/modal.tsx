@@ -10,10 +10,10 @@ export default function Modal({open, setOpen, shopId, gender, useCounter }: {ope
   const [counter, setCounter] = useState(1)
 
   useEffect(() => {
+
   
     if (open && useCounter) {
       if (counter == 0) {
-        // navigateToFeedback(shopId, gender)
         window.location.reload()
       }
       
