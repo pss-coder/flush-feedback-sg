@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+    --dotted-border-color: #231f20;
+  } */
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+
+  .cls-1, .cls-2 {
+    opacity: .33;
+  }
+
+  .cls-3 {
+    stroke-dasharray: 5.27 2.11;
+  }
+
+  .cls-3, .cls-4, .cls-5, .cls-6, .cls-2, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+    stroke-linejoin: round;
+  }
+
+  .cls-3, .cls-4, .cls-5, .cls-6, .cls-2, .cls-7, .cls-8, .cls-10, .cls-11, .cls-12 {
+    fill: none;
+  }
+
+  .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-11, .cls-12 {
+    stroke: #231f20;
+  }
+
+  .cls-13 {
+    fill: url(#linear-gradient-2);
+  }
+
+  .cls-4 {
+    stroke-dasharray: 5.17 2.07;
+  }
+
+  .cls-5 {
+    stroke-dasharray: 3.7 1.48;
+  }
+
+  .cls-6 {
+    stroke-dasharray: 5.19 2.08;
+  }
+
+  .cls-14 {
+    fill: #fff;
+  }
+
+  .cls-15 {
+    fill: rgba(255, 251, 252, .66);
+  }
+
+  .cls-2, .cls-9, .cls-10 {
+    stroke: #000;
+  }
+
+  .cls-16 {
+    letter-spacing: .02em;
+  }
+
+  .cls-17 {
+    fill: #f5f4dc;
+  }
+
+  .cls-18 {
+    fill: url(#linear-gradient-3);
+  }
+
+  .cls-19 {
+    font-family: Roboto-Bold, Roboto;
+  }
+
+  .cls-19, .cls-20 {
+    fill: #231f20;
+    font-size: 24.46px;
+    font-weight: 700;
+  }
+
+  .cls-8 {
+    stroke-width: .5px;
+  }
+
+  .cls-9, .cls-21 {
+    fill: #fff200;
+  }
+
+  .cls-20 {
+    font-family: MicrosoftYaHeiUI-Bold, 'Microsoft YaHei UI';
+  }
+
+  .cls-22 {
+    fill: rgba(255, 251, 252, .8);
+  }
+
+  .cls-23 {
+    fill: #e6e7e8;
+  }
+
+  .cls-11 {
+    stroke-dasharray: 5.03 2.01;
+  }
+
+  .cls-12 {
+    stroke-dasharray: 5 2;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-24 {
+    letter-spacing: -.01em;
+  }
+
+  .cls-25 {
+    fill: #010101;
+  }
+
+  .cls-26 {
+    fill: url(#linear-gradient);
+  }
+
+  .cls-27 {
+    fill: #bcbec0;
+  }
+
+  .cls-28 {
+    fill: #97d2ae;
+  }

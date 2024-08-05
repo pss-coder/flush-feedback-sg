@@ -1,0 +1,50 @@
+{
+ "Hero": {
+    "title":"Clean Toilets 🚽 \n Happier Customers 😁!",
+    "description": "Welcome to SGReportLah, curated solution for maintaining spotless restrooms across Singapore. Our platform empowers shop owners to easily setup and monitor toilet cleanliness with real-time feedback and get live stats via our dashboard.",
+    "get-started": "Get started",
+    "learn-more": "Learn more"
+  },
+  "Features": {
+    "title":"Enhance Customer Satisfaction" ,
+    "description": "Because you ensure spotless restroom facilities, you uphold high cleanliness standards, resulting in an elevated customer experience in your shop.",
+    "easy-setup": {
+      "name":"SGReportLah Setup" ,
+      "title":"Easily set up your toilet monitoring system.",
+      "description": "Sign up with your shop name, address, and contact number. Confirm your address for accurate location finding and receive SMS notifications for feedback"
+    },
+    "qr-code": {
+      "name":"QR Code Display" ,
+      "title":"Get your unique QR code for feedback collection." ,
+      "description": "Receive a unique link and QR code after sign-up. Print and place the QR code on restroom doors for both male and female toilets to start collecting feedback."
+    },
+    "insights": {
+      "name":"Feedback & Statistics" ,
+      "title":"Collect real-time feedback and access live statistics." ,
+      "description": "Our customer-centric feedback system gathers insights on what needs refilling or cleaning. Get curated live statistics providing actionable insights to maintain high standards of cleanliness."
+    }
+  },
+  "SetupForm": {
+     "title":"Set Up Your Toilet Feedback" ,
+     "description": "To set up SGReportLah, simply provide your shop name and address (please confirm for accurate location finding). This ensures you receive timely alerts and can maintain a high standard of restroom cleanliness.",
+    "form": {
+      "name": "Shop Name",
+      "address": "Shop Address",
+      "address-autocomplete": {
+        "label": "Enter your address",
+        "button": "confirm"
+
+      },
+      "contact": "Contact number",
+      "contact-demo": "For Demo Purpose: Phone Number will be hardcoded to 80336612",
+      "button": "Complete Setup"
+    }
+  },
+  "FeedbackQR": {
+    "url": "Feedback Links to Toilets",
+    "copy-male-button": "Copy Male Toilet Feedback Link",
+    "copy-female-button": "Copy Female Toilet Feedback Link",
+    "download-male-button": "Download Male Feedback Link QR Code",
+    "download-female-button": "Download Female Feedback Link QR Code"
+  }
+}
