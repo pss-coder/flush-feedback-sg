@@ -7,7 +7,7 @@ import Modal from '@/components/ui/modal';
 import { ShopDB } from '../../../lib/shop/shopManager';
 
 const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean, handleSubmit: (item:string) => Promise<void>}) => (
-<svg className='z-10 sm:size-4/12 md:size-6/12 lg:size-10/12' xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 715.18 464.31">
+<svg className='z-10 w-full h-full' xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 715.18 464.31">
   <defs>
     {/* <linearGradient id="linear-gradient" x1="430.39" y1="489.3" x2="304.69" y2="19.41" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#231f20"/>
@@ -474,7 +474,7 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setToggleLanguage(prevToggle => !prevToggle);
-    }, 1000);
+    }, 300);
 
     // Cleanup the interval on component unmount
     return () => clearInterval(intervalId);
@@ -562,8 +562,8 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
   
   return (
    <>
-    <div className="flex flex-col justify-center items-center min-h-screen">
-    <DotPattern
+    <div className="w-full h-full fixed inset-0 overflow-hidden">
+    {/* <DotPattern
         width={20}
         height={20}
         cx={2}
@@ -572,11 +572,11 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
         // className={cn(
         //   "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ",
         // )}
-      />
-        <h1 className="text-2xl font-bold">{shop.name}</h1>
+      /> */}
+        {/* <h1 className="text-2xl font-bold">{shop.name}</h1>
       <p className="text-lg text-gray-600">Located: {shop.address}</p>
       <p className="text-lg text-gray-600">{capitalise(genderStr)} Toilet</p>
-      <p className="text-lg text-black font-bold">Tap on item</p>
+      <p className="text-lg text-black font-bold">Tap on item</p> */}
         <SvgComponent toggleLanguage={toggleLanguage} handleSubmit={handleSubmit}/>
         {/* <p className='mt-4 text-center font-light text-sm'>More language to come soon</p> */}
     </div>

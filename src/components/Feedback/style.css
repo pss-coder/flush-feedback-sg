@@ -6,6 +6,12 @@
     --dotted-border-color: #231f20;
   } */
 
+  html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
 
   .cls-1, .cls-2 {
     opacity: .33;

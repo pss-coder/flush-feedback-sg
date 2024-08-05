@@ -17,7 +17,7 @@ export default function Modal({open, setOpen, shopId, gender, useCounter }: {ope
         window.location.reload()
       }
       
-      const timer = (counter > 0 && setInterval(() => setCounter(counter - 1), 1000)) as NodeJS.Timeout;
+      const timer = (counter > 0 && setInterval(() => setCounter(counter - 1), 350)) as NodeJS.Timeout;
       return () => clearInterval(timer);
     }
 

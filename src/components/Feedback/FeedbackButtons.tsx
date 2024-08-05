@@ -166,6 +166,24 @@ export default function FeedbackButtons({ shop, genderStr} : {
     return images[label];
   }
 
+  function mapToChinese(label: string) {
+    const chineseWord: string = {
+      'Bin Full' : "垃圾箱满",
+      'Dirty Basin': "水槽脏",
+      // 'Mirror dirty': mirror,
+
+      // 'Dirty Toilet bowl': "不可以冲水",
+      'No more soap': "没有肥皂",
+      'No more toilet paper' : "没有卫生纸",
+
+      'Toilet Clogged': "不可以冲水",
+
+    'Wet/dirty floor': "地板湿"
+      // Add more mappings as needed
+    };
+    return chineseWord[label];
+  }
+
   return (
     <div className='min-h-screen flex flex-col items-center justify-center'>
       <DotPattern
@@ -237,7 +255,7 @@ export default function FeedbackButtons({ shop, genderStr} : {
        <div className="relative overflow-hidden flex flex-col items-center">
          <Image src={getImageForLabel(label)} alt={label} className="mb-2 w-32 h-32" />
          {/* <span>{label}</span> */}
-         <Marquee pauseOnHover={true} className="[--duration:20s]"><span>{label} Chinese Word </span></Marquee>
+         <Marquee pauseOnHover={true} className="[--duration:20s]"><span>{label} {mapToChinese(label)} </span></Marquee>
        </div>
     </button>
     // <AnimatedSubscribeButton 
