@@ -582,7 +582,7 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
     </div>
 
         {/* Display Submitted Message  */}
-        <Modal open={open} setOpen={setOpen} shopId={shop.id} gender={genderStr} useCounter={false} />
+        <Modal open={open} setOpen={setOpen} shopId={shop.id} gender={genderStr} useCounter={true} />
    </>
   )
 }

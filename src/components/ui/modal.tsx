@@ -7,7 +7,7 @@ import { navigateToFeedback } from '../../../utils/action'
 
 export default function Modal({open, setOpen, shopId, gender, useCounter }: {open: any, setOpen: any, shopId: any, gender: any, useCounter: boolean}) {
 
-  const [counter, setCounter] = useState(2)
+  const [counter, setCounter] = useState(1)
 
   useEffect(() => {
   
@@ -17,7 +17,7 @@ export default function Modal({open, setOpen, shopId, gender, useCounter }: {ope
         window.location.reload()
       }
       
-      const timer = (counter > 0 && setInterval(() => setCounter(counter - 1), 350)) as NodeJS.Timeout;
+      const timer = (counter > 0 && setInterval(() => setCounter(counter - 1), 250)) as NodeJS.Timeout;
       return () => clearInterval(timer);
     }
 
@@ -50,7 +50,7 @@ export default function Modal({open, setOpen, shopId, gender, useCounter }: {ope
                   <p className="text-lg text-gray-500">
                     Thank you. Your feedback has been submitted successfully.
                     <br/>
-                    {useCounter && `Going back in ${counter} seconds`}
+                    {/* {useCounter && `Going back in ${counter} seconds`} */}
                   </p>
                 </div>
               </div>
