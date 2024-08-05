@@ -167,7 +167,7 @@ export default function FeedbackButtons({ shop, genderStr} : {
   }
 
   function mapToChinese(label: string) {
-    const chineseWord: string = {
+    const chineseWord: any = {
       'Bin Full' : "垃圾箱满",
       'Dirty Basin': "水槽脏",
       // 'Mirror dirty': mirror,
