@@ -193,7 +193,7 @@ const SvgComponent = ({toggleLanguage, handleSubmit}: { toggleLanguage: boolean,
 
   <g className={!toggleLanguage ? `` : 'hidden' } onClick={() => handleSubmit('paper')} id="Toilet_Paper_x5F_Text__x28_Eng_x29_">
     <path className="cls-15" d="M679.22,127.51h-130.41l-2.69-9.64c-4.23-6.99-11.95-23.68-36.82-22.54v-36.9c0-3.99,3.23-7.22,7.22-7.22h162.7c3.99,0,7.22,3.23,7.22,7.22v61.86c0,3.99-3.23,7.22-7.22,7.22Z"/>
-    <text className="cls-19" transform="translate(520.24 82.11)"><tspan x="0" y="0">No more </tspan><tspan className="cls-24" x="100.42" y="0">t</tspan><tspan x="108.33" y="0">oilet </tspan><tspan x="40.83" y="29.35">paper?</tspan></text>
+    <text className="cls-19" transform="translate(520.24 82.11)"><tspan x="30.83" y="-10">No more</tspan><tspan x="30.83" y="19.35">toilet paper?</tspan></text>
   </g>
   <g className={toggleLanguage ? '' : 'hidden'} onClick={() => handleSubmit('paper')} id="Toilet_Paper_x5F_Text__x28_Chi_x29_">
     <path className="cls-15" d="M679.22,127.51h-130.41l-2.69-9.64c-4.23-6.99-11.95-23.68-36.82-22.54v-36.9c0-3.99,3.23-7.22,7.22-7.22h162.7c3.99,0,7.22,3.23,7.22,7.22v61.86c0,3.99-3.23,7.22-7.22,7.22Z"/>
