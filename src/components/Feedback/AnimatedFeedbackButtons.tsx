@@ -541,7 +541,10 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
     setCooldown(prev => ({ ...prev, [item]: true }));
 
     console.log('submitting feedback on: ' + item)
+    
 
+    setTitle("Feedback Submitted")
+    setMessage("Thank you. Your feedback has been submitted successfully.")
     setOpen(true)
 
     // Submit item at a time
