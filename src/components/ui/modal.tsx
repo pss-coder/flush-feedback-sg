@@ -5,7 +5,7 @@ import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/re
 import { CheckIcon } from '@heroicons/react/24/outline'
 import { navigateToFeedback } from '../../../utils/action'
 
-export default function Modal({open, setOpen, shopId, gender, useCounter }: {open: any, setOpen: any, shopId: any, gender: any, useCounter: boolean}) {
+export default function Modal({open, setOpen, shopId, gender, useCounter, title ,message }: {open: any, setOpen: any, shopId: any, gender: any, useCounter: boolean, title: string ,message: string}) {
 
   const [counter, setCounter] = useState(1)
 
@@ -44,11 +44,11 @@ export default function Modal({open, setOpen, shopId, gender, useCounter }: {ope
               </div>
               <div className="mt-3 text-center sm:mt-5">
                 <DialogTitle as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                  Feedback Submitted
+                  {title}
                 </DialogTitle>
                 <div className="mt-2">
                   <p className="text-lg text-gray-500">
-                    Thank you. Your feedback has been submitted successfully.
+                    {message}
                     <br/>
                     {/* {useCounter && `Going back in ${counter} seconds`} */}
                   </p>
