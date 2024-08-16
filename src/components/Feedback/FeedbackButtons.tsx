@@ -302,7 +302,10 @@ export default function FeedbackButtons({ shop, genderStr} : {
 {/* )} */}
 
 {/* Display Submitted Message  */}
-<Modal open={open} setOpen={setOpen} shopId={shop.id} gender={gender} useCounter={true} />
+<Modal open={open} setOpen={setOpen} shopId={shop.id} gender={gender} useCounter={true} 
+title='Feedback Submitted'
+message='Thank you. Your feedback has been submitted successfully.'
+/>
 
         </div>
   

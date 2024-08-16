@@ -469,6 +469,13 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
     const [toggleLanguage, setToggleLanguage] = useState(false);
     const [open, setOpen] = useState(false)
 
+    // cooldown mechanism after submission
+      // disables button that was just submitted, and re-enabled after submission
+    const [cooldown, setCooldown] = useState<{ [key: string]: boolean }>({});
+    const [title, setTitle] = useState("Feedback Submitted")
+    const [message, setMessage] = useState("Thank you. Your feedback has been submitted successfully.")
+
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setToggleLanguage(prevToggle => !prevToggle);
@@ -524,8 +531,20 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
   };
 
   async function handleSubmit(item: string) {    
-    console.log(item);
+    if (cooldown[item]) {
+      console.log(item + 'already submitted, thus not submitting after 2 seconds')
+      setTitle("Already Submitted!")
+      setMessage("Is there another item to feedback?")
+      setOpen(true) // display pop-up
+      return; // Prevent repeated taps
+    }
+    setCooldown(prev => ({ ...prev, [item]: true }));
 
+    console.log('submitting feedback on: ' + item)
+    
+
+    setTitle("Feedback Submitted")
+    setMessage("Thank you. Your feedback has been submitted successfully.")
     setOpen(true)
 
     // Submit item at a time
@@ -546,6 +565,12 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
       alert("something went wrong! Please try again and ensure you are connect to the network.")
       console.error('Failed to submit feedback', response);
     }
+
+    // Set a 2-second cooldown
+    setTimeout(() => {
+      setOpen(false)
+      setCooldown(prev => ({ ...prev, [item]: false }));
+  }, 2000);
 
   }
 
@@ -580,7 +605,10 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
     </div>
 
         {/* Display Submitted Message  */}
-        <Modal open={open} setOpen={setOpen} shopId={shop.id} gender={genderStr} useCounter={false} />
+        <Modal open={open} setOpen={setOpen} shopId={shop.id} gender={genderStr} useCounter={false}
+        title={title}
+        message={message}
+        />
    </>
   )
 }
