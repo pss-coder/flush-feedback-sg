@@ -32,7 +32,7 @@
       "address": "Shop Address",
       "address-autocomplete": {
         "label": "Enter your address",
-        "button": "confirm"
+        "button": "Confirm"
 
       },
       "contact": "Contact number",

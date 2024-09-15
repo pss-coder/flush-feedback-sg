@@ -75,6 +75,7 @@ const AddressAutocomplete = ({ setCoordinates, setAddress, setIsConfirmed }: {se
         required
       />
       {addressError && <p className="mt-1 text-sm text-red-600">{addressError}</p>}
+      {/* TODO: make the confirm button showed, when only there is a text on the - query */}
       <button
         type="button"
         className="mt-2 bg-indigo-500 text-white px-3 py-1 rounded-md"
