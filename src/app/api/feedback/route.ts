@@ -42,6 +42,7 @@ export async function POST(req: Request) {
 
   console.log("feedback inserted success")
 
+  // Get Shop Information
   const shop = await getShop(supabase, shopId) as any
   console.log(shop.data as any)
 

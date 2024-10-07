@@ -496,7 +496,7 @@ export default function AnimatedFeedbackButtons({ shop, genderStr} : {
     'wet-floor': 'wet_dirty_floor',
     'dustbin': 'bin_full',
     
-    // No longer in use
+    // TODO: No longer in use
     'Dirty Toilet bowl': 'dirty_toilet_bowl',
     'Mirror dirty': 'dirty_mirror',
   };
